@@ -1,0 +1,10 @@
+a {
+  text-decoration: none;
+  color: #292929;
+}
+
+.blog-list {
+  width: 800px;
+  min-height: 500px;
+  margin: 0 auto;
+}

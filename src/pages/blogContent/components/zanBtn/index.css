@@ -1,0 +1,22 @@
+.zan-btn {
+  /* padding: 20px 10px; */
+  font-size: 12px;
+  border: 1px solid #EBB690;
+  border-radius: 3px;
+  cursor: pointer;
+  text-align: center;
+  height: 30px;
+  line-height: 30px;
+  width: 50px;
+}
+
+.btn-before {
+  background: #fff;
+  color: #EBB690;
+}
+
+.btn-after,
+.zan-btn:hover {
+  background: #EBB690;
+  color: #fff;
+}
