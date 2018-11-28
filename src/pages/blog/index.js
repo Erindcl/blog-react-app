@@ -4,13 +4,33 @@ import BlogList from './blogList';
 import BlogContent from '../blogContent';
 import BlogsData from '../../blogsData';
 
+
 class Blog extends Component {
   constructor(props) {
     super(props);
-    this.state = {nowShowIndex: -1, blogsData: BlogsData};
+    this.state = {nowShowIndex: -1, blogsData: BlogsData, value: 'hhh'};
     this.addStart = this.addStart.bind(this);
     this.focusItem = this.focusItem.bind(this);
   }
+
+  componentDidMount() {
+    const action = { type: 'SET_START_NUM', plyload: [2,7,9,4,3] }
+    
+    // this.props.startNum(action)
+    // console.log(this.props.startNum(action));
+    // const temBlogsData = this.state.blogsData;
+    // const temIndex = this.state.nowShowIndex;
+    // this.setState({nowShowIndex: temIndex, blogsData: temBlogsData, value: 'yyy'});
+    // console.log("初始化时候的state");
+    // console.log(this.state.value);
+    console.log(this.props);
+  }
+
+  // componentDidUpdate() {
+  //   // console.log("修改后的state");
+  //   // console.log(this.state.value);
+  //   console.log(this.props.start);
+  // }
 
   addStart (e) {
     // console.log(111)
@@ -40,11 +60,13 @@ class Blog extends Component {
       focusFunc={this.focusItem} 
       addStartFunc={this.addStart} 
       data={this.state.blogsData[this.state.nowShowIndex]}
+      myIndex={this.state.nowShowIndex}
     />;
     // const childCom = bCElement;
     const childCom = this.state.nowShowIndex === -1 ? bLElement : bCElement;
     return (
       <div>
+        <div>{this.props.start}</div>
         <NavBar 
           text="博客" 
         />
@@ -53,5 +75,6 @@ class Blog extends Component {
     )
   };
 }
+
 
 export default Blog;

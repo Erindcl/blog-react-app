@@ -8,13 +8,13 @@ class OneItem extends Component {
 
   render() {
     return (
-      <div class="one-item">
-        <div class="one-item-top">
+      <div className="one-item">
+        <div className="one-item-top">
           <span>{ this.props.userName }</span>
           <span>{ this.props.time }</span>
           <span>{ this.props.start }个赞</span>
         </div>
-        <div class="one-item-content">
+        <div className="one-item-content">
           { this.props.content }
         </div>
         
